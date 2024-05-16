@@ -1,0 +1,12 @@
+{
+    "name": "Joseph",
+    "profession": "Computer Science",
+    "age": 26,
+    "residence": "S.Korea",
+    "adress": "S.Korea, Chuncheon",
+    "languages":["Uzbek", "Korean", "English"],
+    "skills": ["Html", "Css", "Js", "NodeJS", "Java"],
+    "extra_skills": ["Bootstrap", "Materialize", "Styling", "GIT Knowledge"],
+    "work_place": "IT Company"
+
+}
