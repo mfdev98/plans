@@ -1,3 +1,20 @@
+// B-TASK: 
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+// function countDigits(s) {
+//         let count = 0;
+//         let a = /[^0-9]/g;
+//         let n=0;
+//         n=s.replace(a, "");
+//         console.log(n.length);
+//     }
+    
+// countDigits('ad2a54y79wet0sfgb9');
+
+// console.log('===========');
+
 // MIT 14 TASK A
 // Harf sifatida kiritilgan birinchi parametr, 
 // kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
