@@ -6,7 +6,8 @@ const connectionString = "mongodb+srv://mfdev98:O9M8VpGPnK7QOuD2@cluster0.qgciez
 
 mongodb.connect(connectionString,{useNewUrlParser: true, useUnifiedTopology: true,}, (err, client) => {
     if (err) console.log("ERROR on connection MongoDB");
-    else {
+    else 
+    {
         console.log("MongoDB connection succeed");
         // console.log(client);
         module.exports = client;
