@@ -37,7 +37,7 @@ document
             createField.focus();
          })
          .catch((err) => {
-            console.log("iltimos qayta harakat qiling");
+            console.log("iltimos qaytadan harakat qiling");
          });
    });
 
@@ -65,9 +65,39 @@ document.addEventListener("click", function (e) {
       // }
    }
 
-   //edit oper
+   // edit oper
    if (e.target.classList.contains("edit-me")) {
-      alert("siz edit tugmasini bosdingiz");
+      let userInput = prompt(
+         "O'zgartirishni kiriting",
+         e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+      );
+      if (userInput) {
+         axios
+            .post("/edit-item", {
+               id: e.target.getAttribute("data-id"),
+               new_input: userInput,
+            })
+            .then((response) => {
+               e.target.parentElement.parentElement.querySelector(
+                  ".item-text"
+               ).innerHTML = userInput;
+            })
+            .catch((err) => {
+               console.log("iltimos qaytadan harakat qiling!", err);
+            });
+      }
    }
+});
 
+
+// clear-all oper
+document.getElementById("clear-all").addEventListener("click", function () {
+   axios.post("/delete-all", { delete_all: true })
+      .then((response) => {
+         alert(response.data.state);
+         document.location.reload();
+      })
+      .catch((err) => {
+         console.log("Iltimos qaytadan harakat qiling:", err);
+      });
 });
