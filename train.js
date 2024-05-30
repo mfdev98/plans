@@ -1,16 +1,12 @@
-// D-TASK
-// Ikkita parametra ega function tuzing, va functioning
-// berilgan birinchi va ikkinchi parametr qiymatlari o'zaro to'liq
-// mos kelsa true qiymat qaytarsin
+// E-TASK
 
-// Masalan: checkContent("mitgroup", "gmtiprou");
-// Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
-// ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi.
+// Shunday function tuzing, u bitta string argumentini qabul qilib,
+// qabul qilingan stringni teskari ko'rinishda return qilsin
 
-function checkContent(str1, str2) {
-    const sortedStr1 = str1.split('').sort().join('');
-    const sortedStr2 = str2.split('').sort().join('');
-    console.log(sortedStr1 === sortedStr2);
+// MASALAN: getReverse("hello"); return qilsin "olleh"
+
+function getReverse(str) {
+    console.log(str.split('').reverse().join(''));
 }
 
-checkContent("mitgroup", "gmtiprou");
+getReverse("hi");

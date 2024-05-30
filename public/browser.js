@@ -92,9 +92,10 @@ document.addEventListener("click", function (e) {
 // clear-all oper
 document.getElementById("clean-all").addEventListener("click", function () {
    axios.post("/delete-all", { delete_all: true }).then((response) => {
-         alert(response.data.state);
-         document.location.reload();
-      })
+      alert(response.data.state);
+      // document.location.reload();
+      document.querySelector("#item-list").innerHTML = '';
+   })
       .catch((err) => {
          console.log("Iltimos qaytadan harakat qiling:", err);
       });
