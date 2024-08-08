@@ -1,18 +1,22 @@
-// F-TASK
-// Yagona string argumentga ega findDoublers nomli function tuzing
-// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
-// true yokida false natija qaytarsin.
+// G-TASK
 
-// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+// Yagona parametrga ega function tuzing.
+// Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.
+// Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
 
-function findDoublers(str) {
-    for (let a = 0; a < str.length; a++) {
-        for (let b = 1; b < str.length - a; b++) {
-            if (str[a] === str[b + a]) {
-                return console.log(false);
-            }
+// MASALAN: getHighestIndex([5, 21, 12, 21 ,8]); return qiladi 1 sonini
+// Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
+// Va bu 21 soni arrayning taribidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
+
+function getHighestIndex(num) {
+    let max = 0;
+    let index = 0;
+    for (let i = 0; i < num.length; i++) {
+        if (max < num[i]) {
+            max = num[i];
+            index = i;
         }
     }
-    return console.log(true);
+    return console.log(index);
 }
-findDoublers("hello");
+getHighestIndex([5, 21, 12, 21, 8]);

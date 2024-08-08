@@ -7,7 +7,7 @@ const app = express();
 const db = require("./server").db();
 const mongodb = require("mongodb");
 
-// 1: Kirish code
+// 1: Entrance
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -59,7 +59,7 @@ app.post("/edit-item", (req, res) => {
 app.post("/delete-all", (req, res) => {
     if (req.body.delete_all) {
       db.collection("plans").deleteMany(function () {
-        res.json({ state: "hamma rejalar o'chirildi" });
+        res.json({ state: "ALL DELETED!" });
       });
     }
   });
