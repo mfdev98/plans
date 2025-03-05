@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  node:
+    container_name: reja
+    restart: always
+    image: mfdev98/plan-image
+    ports:
+      - "3003:3000" # 리스트 형식으로 수정
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+
+    networks:
+      - plan_network # 리스트 형식으로 수정
+
+    command: bash -c "npm install && npm run dev"
+
+networks:
+  plan_network:
+    driver: bridge
